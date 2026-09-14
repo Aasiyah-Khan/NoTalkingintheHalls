@@ -1,0 +1,100 @@
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 30460)
+VBCSCompiler prewarm took 88.94 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-khana" at "2026-09-09T23:01:53.2159672Z"
+Built from '6000.6/respin/6000.6.0f1-fa21a270ab12' branch; Version is '6000.6.0f1 (f7f8ed4d1e24) revision 16251117'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 5896 MB
+BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-09T23:01:53Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 18476, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              81cb017d0179459eaf121affe8e162b7
+  Correlation Id:          c397a9d7e254cc9c7d3237b97dce7b50
+  External correlation Id: 4401700481936600910
+  Machine Id:              sZ0PLcRGBLA8d6yFPwiTHTCFfSs=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-khana" (connect: 0.00s, validation: 0.09s, handshake: 0.07s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-khana-notifications" at "2026-09-09T23:01:53.3830158Z"
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated the access token J1SCAN7K04...
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 2475661882985-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.02
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.27s
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe
+-projectpath
+C:\Users\khana\OneDrive\Documents\GitHub\NoTalkingintheHalls
+-acceptSoftwareTermsForThisRunOnly
+-useHub
+-hubIPC
+-cloudEnvironment
+production
+-licensingIpc
+LicenseClient-khana
+-hubSessionId
+e765b263-50da-4ae8-9585-ad0bbc88bb44
+-accessToken
+J1SCAN7K04_ZjmFd88sSucJKIP8sBqW3xRUUKKwgzGg002f
+Successfully changed project path to: C:\Users\khana\OneDrive\Documents\GitHub\NoTalkingintheHalls
+C:/Users/khana/OneDrive/Documents/GitHub/NoTalkingintheHalls
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [11560]  Target information:
+
+Player connection [11560]  * "[IP] 10.1.46.208 [Port] 55504 [Flags] 2 [Guid] 3542844064 [EditorId] 3542844064 [Version] 1048832 [Id] WindowsEditor(7,Aasiyah) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [11560] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [11560] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-33668" after 0.0 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Rebuilding Library because the asset database could not be found!
+[ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 0
