@@ -4,7 +4,7 @@ public class movement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
-    float moveSpeed = 5f;
+    float moveSpeed = 10f;
 
     public Camera mainCam;
 
