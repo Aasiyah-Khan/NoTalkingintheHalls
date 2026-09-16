@@ -5130,7 +5130,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf479ca3867919f48bb47ed8d8dc070f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollower
+<<<<<<< Updated upstream
   target: {fileID: 395689867}
+=======
+  offset: {x: 0, y: -0.3, z: -10}
+  velocity: {x: 0, y: 0, z: 0}
+  smoothTime: 0.25
+  target: {fileID: 395689867}
+  xPos: 0
+  yPos: 0
+>>>>>>> Stashed changes
 --- !u!1 &1581252826
 GameObject:
   m_ObjectHideFlags: 0
