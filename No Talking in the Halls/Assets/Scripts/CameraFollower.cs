@@ -11,8 +11,12 @@ public class CameraFollower : MonoBehaviour
 
     //public Transform trans;
 
-    float xPos = 0f;
-    float yPos = 0f;
+    //float xPos = 0f;
+    //float yPos = 0f;
+    float minX = -29.12f;
+    float maxX = 28.99f;
+    float minY = -1.76f;
+    float maxY = 61f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,12 +29,20 @@ public class CameraFollower : MonoBehaviour
     {
         Vector3 targetPosition = target.position + offset;
 
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        //transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
+        /*
         xPos = this.gameObject.GetComponent<Transform>().position.x;
         yPos = this.gameObject.GetComponent<Transform>().position.y;
 
         xPos = Mathf.Clamp(xPos, -29.12f, 28.99f);
         yPos = Mathf.Clamp(yPos, -1.76f, 61f);
+        */
+
+        float clampedX = Mathf.Clamp(smoothedPosition.x, minX, maxX);
+        float clampedY = Mathf.Clamp(smoothedPosition.y, minY, maxY);
+
+        this.gameObject.GetComponent<Transform>().position = new Vector3(clampedX, clampedY, smoothedPosition.z);
     }
 }
