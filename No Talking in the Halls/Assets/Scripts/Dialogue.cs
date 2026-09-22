@@ -15,6 +15,9 @@ public class Dialogue : MonoBehaviour
     private bool talking;
     private bool interacting;
 
+    public GameObject sprayChoice;
+    public GameObject shushChoice;
+
 
    
 
@@ -23,6 +26,8 @@ public class Dialogue : MonoBehaviour
         // hide the UI
         UI.SetActive(false);
         UIText.SetActive(false);
+        sprayChoice.SetActive(false);
+        shushChoice.SetActive(false);
     }
 
 
@@ -83,6 +88,8 @@ public class Dialogue : MonoBehaviour
         }
         talking = false;
         interacting = false;
+
+        Choices("Test"); 
     }
 
 
@@ -123,7 +130,15 @@ public class Dialogue : MonoBehaviour
         interacting = true;
     }
 
+    // a function for choices 
+    private void Choices(string charName){
+        // show both choices
+        sprayChoice.SetActive(true);
+        shushChoice.SetActive(true);
+        // then some function for both choices will happen or smth
+    }
 
+   
 
 
        
