@@ -18,7 +18,7 @@ public class Dialogue : MonoBehaviour
     public GameObject sprayChoice;
     public GameObject shushChoice;
 
-
+    private string character;
    
 
     void Start()
@@ -105,29 +105,49 @@ public class Dialogue : MonoBehaviour
     // the UI appears after interacting with a character
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "testChar"&&!talking && interacting)
-        {
+        Debug.Log("Entered trigger");
 
-            Debug.Log("Interacted with testChar");
+        character = collider.tag;
+
+        interacting = true;
+        Debug.Log("Is interacting");
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        interacting = false;
+    }
+
+    public void Interact()
+    {
+
+
+        if (!talking && interacting)
+        {
+            Debug.Log("Ready to talk");
             talking = true;
             // turn UI on no keypress yet
-             UI.SetActive(true);
+            UI.SetActive(true);
             UIText.SetActive(true);
+            if (character == "testChar")
+            {
 
-            logs = "Hi I am a ghost.";
+                logs = "Hi I am a ghost.";
+
+
+            }
+            else if (character == "guy")
+            {
+
+                logs = "Hi I am a guy.";
+            }
             Display(logs);
-                
+
         }
         else
         {
             //Debug.Log("Script Not Found");
         }
-               
-    }
-
-    public void Interact()
-    {
-        interacting = true;
     }
 
     // a function for choices 
@@ -137,6 +157,8 @@ public class Dialogue : MonoBehaviour
         shushChoice.SetActive(true);
         // then some function for both choices will happen or smth
     }
+
+
 
    
 
