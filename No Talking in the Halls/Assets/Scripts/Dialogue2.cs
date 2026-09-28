@@ -49,8 +49,6 @@ public class Dialogue2 : MonoBehaviour
 // where the image sprite for the the character speaking goes
     public GameObject speaker;
     // the choice buttons
-    public GameObject sprayChoice;
-    public GameObject scoldChoice;
 
     // for my choices 
      public GameObject optionPanel;
@@ -81,8 +79,7 @@ public class Dialogue2 : MonoBehaviour
      dialoguePanel.SetActive(false);
         charNum = 0;
         nameUI.SetActive(false);
-        scoldChoice.SetActive(false);
-        sprayChoice.SetActive(false);
+       
         optionPanel.SetActive(false);
     }
 
