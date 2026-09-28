@@ -12,6 +12,13 @@ public class GameManager : MonoBehaviour
 
     public string characterName;
 
+    public int gameState;
+
+    // so the game can tell whether or not you're talking to a ghost
+    public bool ghost;
+
+
+
 
     void Awake()
     {
@@ -29,16 +36,25 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        ghost = false;
         ghostChances = 3;
         humanChances = 3;
 
-        characterName = "name";
+        characterName = "";
+
+        // state 0 is home screen
+        gameState = 0;
+        
+        // state 1 is dialogue
+        // state 2 is choices
+        // state 3 is lose
+        // state 4 is win
     }
 
 
 
     void FixedUpdate()
     {
-        Debug.Log(characterName);
+        Debug.Log(gameState);
     }
 }

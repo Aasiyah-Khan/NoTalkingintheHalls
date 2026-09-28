@@ -13,6 +13,8 @@ public class Dialogue2 : MonoBehaviour
     Story NPC1;
     Story NPC2;
 
+     Story currentStory;
+
     // more ink stuff
     public Ink.UnityIntegration.InkFile inkFile;
     public Ink.UnityIntegration.InkFile inkFile2;
@@ -33,6 +35,7 @@ public class Dialogue2 : MonoBehaviour
 
     // ui for the name
     public GameObject nameUI;
+    public GameObject charName;
 
     // to keep track of stuff
     bool dialogueisPlaying;
@@ -42,6 +45,24 @@ public class Dialogue2 : MonoBehaviour
     private bool talking;
     private bool interacting;
     private string character;
+
+// where the image sprite for the the character speaking goes
+    public GameObject speaker;
+    // the choice buttons
+    public GameObject sprayChoice;
+    public GameObject scoldChoice;
+
+    // for my choices 
+     public GameObject optionPanel;
+    public GameObject buttons;
+     // this is what the player chooses to select
+    static Choice choiceSelected;
+
+    private bool isWaitingForChoice;
+    //public Choice element;
+
+
+
 
 
     // setup
@@ -55,9 +76,14 @@ public class Dialogue2 : MonoBehaviour
       NPC1 = new Story(inkFile.storyJson);
     NPC2 = new Story(inkFile2.storyJson);
 
-        dialogueisPlaying = false;
-        dialoguePanel.SetActive(false);
+    // stuff that need to be hiiden (UI)
+    dialogueisPlaying = false;
+     dialoguePanel.SetActive(false);
         charNum = 0;
+        nameUI.SetActive(false);
+        scoldChoice.SetActive(false);
+        sprayChoice.SetActive(false);
+        optionPanel.SetActive(false);
     }
 
     void Update()
@@ -68,6 +94,8 @@ public class Dialogue2 : MonoBehaviour
             return;
         }
         // currently code above has no purpose -> double check and remove
+
+        // always check game states... if gamestate is 3 exit the dialouge and change the gamestate back to 2
     }
 
     // the helper function I made to start the dialogue
@@ -78,39 +106,37 @@ public class Dialogue2 : MonoBehaviour
       
         if (charNum == 1)
         {
-            // if there was UI
-            //charUi.SetActive(true);
-            if (NPC1.canContinue)
-            {
-                dialoguetxt = NPC1.Continue();
-                dialogueText.GetComponent<TextMeshProUGUI>().text = dialoguetxt;
-            }
-            else
-            {
-                exitDialogueMode();
-            }
+            currentStory = NPC1;
+
         }
         else if (charNum == 2)
         {
-            if (NPC2.canContinue)
-            {
-                dialoguetxt = NPC2.Continue();
-                dialogueText.GetComponent<TextMeshProUGUI>().text = dialoguetxt;
-            }
-            else
-            {
-                exitDialogueMode();
-            }
+            currentStory = NPC2;
         }
+        else
+        {
+                
+            exitDialogueMode();
+        }
+         // if there was UI
+        //charUi.SetActive(true);
+        dialoguetxt = currentStory.Continue();
+        dialogueText.GetComponent<TextMeshProUGUI>().text = dialoguetxt;
+    
     }
 
+
+
+   
     // helper function
      void exitDialogueMode()
     {
+        // hide everything
         dialogueisPlaying = false;
         dialoguePanel.SetActive(false);
         talking = false;
         interacting = false;
+        nameUI.SetActive(false);
         //charUi.SetActive(false); -> unneeded rn
 
     }
@@ -119,28 +145,56 @@ public class Dialogue2 : MonoBehaviour
     // this definitely needs to be cleaned up
     public void storyCon()
     {
-         if (NPC1.canContinue &&  dialogueisPlaying == true && charNum == 1)
-            {
-                dialoguetxt = NPC1.Continue();
+        if(charNum == 1)
+        {
+            currentStory = NPC1;
+        }
+        else if(charNum == 2)
+        {
+            currentStory = NPC2;
+        }
+        // always check if dialogue is dialoguing
+         if (currentStory.canContinue &&  dialogueisPlaying == true)
+        {
+                dialoguetxt = currentStory.Continue();
                 StopAllCoroutines();
+                // this is just to make the sentences type out
                 StartCoroutine(TypeSentence(dialoguetxt));
-            //textBox.GetComponent<TextMeshProUGUI>().text = dialoguetxt;
-            // store the tags in the story...
-            List<string> currentTags = NPC1.currentTags;
-            //SpeakerUi(currentTags);
-            //firstName.GetComponent<TextMeshProUGUI>().text = nametag;
 
-            }
-             else if (NPC2.canContinue &&  dialogueisPlaying == true  && charNum == 2)
-            {
-                dialoguetxt = NPC2.Continue();
-                StopAllCoroutines();
-                StartCoroutine(TypeSentence(dialoguetxt));
-            //textBox.GetComponent<TextMeshProUGUI>().text = dialoguetxt;
-            // store the tags in the story...
-            List<string> currentTags = NPC2.currentTags;
+                // store the tags in the story...
+                List<string> currentTags = currentStory.currentTags;
+                 // then use these tags
+                foreach (string tag in currentTags)
+                {
+                    switch (tag.ToLower())
+                    {
+                        case "wrong":
+                            // subtact from points
+                            Debug.Log("Wrong Choice, Loser");
+                            break;
+
+                        case "correct":
+                            Debug.Log("You're right!");
+                            break;
+                        
+                        case "you":     
+                            nametag = "You";
+                            nameUI.SetActive(true);
+                            break;
+
+                        
+
+                    }
+
+             
+                }
+
             //SpeakerUi(currentTags);
-            //firstName.GetComponent<TextMeshProUGUI>().text = nametag;
+            charName.GetComponent<TextMeshProUGUI>().text = nametag;
+                if(currentStory.currentChoices.Count != 0)
+                {
+                    ShowChoices();
+                }
 
             }
             else
@@ -221,7 +275,47 @@ public class Dialogue2 : MonoBehaviour
         }
     }
 
-   
+
+
+     void ShowChoices()
+    {
+        isWaitingForChoice = true;
+        optionPanel.SetActive(true);
+
+        // Clear any old choices sitting in the panel first
+        foreach (Transform child in optionPanel.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        List<Choice> choices = currentStory.currentChoices;
+
+        for (int i = 0; i < choices.Count; i++)
+        {
+            GameObject buttonObj = Instantiate(buttons, optionPanel.transform);
+            buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = choices[i].text;
+
+           
+            int choiceIndex = i; 
+
+            Button butt = buttonObj.GetComponent<Button>();
+            butt.onClick.AddListener(() => MakeChoice(choiceIndex));
+        }
+    }
+
+    // for when a choice button is clicked
+    public void MakeChoice(int index)
+    {
+        Debug.Log("BUTTON CLICKED! INDEX: " + index);
+        currentStory.ChooseChoiceIndex(index); 
+        
+       // hide my UI
+        optionPanel.SetActive(false);
+        isWaitingForChoice = false;
+        // continue the story
+         storyCon();
+
+    }
 
 
 
