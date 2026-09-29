@@ -2445,8 +2445,6 @@ MonoBehaviour:
   nameUI: {fileID: 640127887}
   charName: {fileID: 1190182402}
   speaker: {fileID: 0}
-  sprayChoice: {fileID: 0}
-  scoldChoice: {fileID: 0}
   optionPanel: {fileID: 815390710}
   buttons: {fileID: 7826221271020212917, guid: e752184782f63ac43bf5c0e98115580d, type: 3}
 --- !u!1 &416608736
