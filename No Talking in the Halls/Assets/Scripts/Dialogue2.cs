@@ -178,10 +178,14 @@ public class Dialogue2 : MonoBehaviour
                             nametag = "You";
                             nameUI.SetActive(true);
                             break;
+                        case "testchar":
+                            nametag = "testChar";
+                            nameUI.SetActive(true);
+                            break;
 
-                        
 
-                    }
+
+                }
 
              
                 }
