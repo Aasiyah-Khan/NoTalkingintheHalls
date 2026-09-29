@@ -59,7 +59,7 @@ public class Dialogue2 : MonoBehaviour
     private bool isWaitingForChoice;
     //public Choice element;
 
-
+    private GameObject currentNPC;
 
 
 
@@ -135,6 +135,16 @@ public class Dialogue2 : MonoBehaviour
         interacting = false;
         nameUI.SetActive(false);
         //charUi.SetActive(false); -> unneeded rn
+        if(currentNPC.GetComponent<BoxCollider2D>().isTrigger == true)
+        {
+             currentNPC.GetComponent<BoxCollider2D>().isTrigger = false;
+             Debug.Log("trigger removed");
+        }
+        else
+        {
+            Debug.Log("trigger already gone");
+        }
+      
 
     }
 
@@ -237,6 +247,8 @@ public class Dialogue2 : MonoBehaviour
 
         interacting = true;
         Debug.Log("Is interacting");
+
+        currentNPC = collider.gameObject;
     }
 
     void OnTriggerExit2D(Collider2D collision)

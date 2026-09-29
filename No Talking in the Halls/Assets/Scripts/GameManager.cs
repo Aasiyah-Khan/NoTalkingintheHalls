@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     // so the game can tell whether or not you're talking to a ghost
     public bool ghost;
 
-
+    
 
 
     void Awake()
