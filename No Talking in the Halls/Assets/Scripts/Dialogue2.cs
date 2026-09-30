@@ -1,9 +1,10 @@
-using UnityEngine;
 using Ink.Runtime;
-using TMPro;
-using System.Collections.Generic;
-using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Dialogue2 : MonoBehaviour
@@ -189,10 +190,35 @@ public class Dialogue2 : MonoBehaviour
                         case "wrong":
                             // subtact from points
                             Debug.Log("Wrong Choice, Loser");
-                            break;
+                            GameManager.instance.humanChances--;
+                        if (GameManager.instance.humanChances <= 2 )
+                        {
+                            GameManager.instance.HR1.SetActive(true);
+                        }
+                        if (GameManager.instance.humanChances <= 1)
+                        {
+                            GameManager.instance.HR2.SetActive(true);
+                        }
+                        if (GameManager.instance.humanChances <= 0)
+                        {
+                            GameManager.instance.HR3.SetActive(true);
+                            SceneManager.LoadScene("Lose");
+                        }
+                        break;
+
+                        case "wrongGhost":
+                        GameManager.instance.ghostChances--;
+
+                        //GameManager.instance.Sound3.SetActive(false);
+                        break;
 
                         case "right":
                             Debug.Log("You're right!");
+                            GameManager.instance.correct++;
+                            if (GameManager.instance.correct == 3)
+                            {
+                                SceneManager.LoadScene("Win");
+                            }
                             break;
                         
                         case "you":     

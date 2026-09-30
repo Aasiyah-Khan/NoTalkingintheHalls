@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     // state management
     public int ghostChances;
     public int humanChances;
+    public int correct;
 
     public string characterName;
 
@@ -17,7 +18,18 @@ public class GameManager : MonoBehaviour
     // so the game can tell whether or not you're talking to a ghost
     public bool ghost;
 
-    
+    public GameObject HR1;
+    public GameObject HR2;
+    public GameObject HR3;
+
+    public GameObject Ghost1;
+    public GameObject Ghost2;
+    public GameObject Ghost3;
+
+    public GameObject Sound1;
+    public GameObject Sound2;
+    public GameObject Sound3;
+
 
 
     void Awake()
@@ -39,6 +51,7 @@ public class GameManager : MonoBehaviour
         ghost = false;
         ghostChances = 3;
         humanChances = 3;
+        correct = 0;
 
         characterName = "";
 
