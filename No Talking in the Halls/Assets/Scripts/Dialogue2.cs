@@ -12,12 +12,14 @@ public class Dialogue2 : MonoBehaviour
     // these are the ink files for each character
     Story NPC1;
     Story NPC2;
+    Story NPC3;
 
      Story currentStory;
 
     // more ink stuff
     public Ink.UnityIntegration.InkFile inkFile;
     public Ink.UnityIntegration.InkFile inkFile2;
+    public Ink.UnityIntegration.InkFile inkFile3;
 
 
     // to hold text in textbox
@@ -71,8 +73,9 @@ public class Dialogue2 : MonoBehaviour
     nametag = "NPC";
 
     // setup
-      NPC1 = new Story(inkFile.storyJson);
+    NPC1 = new Story(inkFile.storyJson);
     NPC2 = new Story(inkFile2.storyJson);
+    NPC3 = new Story(inkFile3.storyJson);
 
     // stuff that need to be hiiden (UI)
     dialogueisPlaying = false;
@@ -109,6 +112,10 @@ public class Dialogue2 : MonoBehaviour
         else if (charNum == 2)
         {
             currentStory = NPC2;
+        }
+        else if (charNum == 3)
+        {
+            currentStory = NPC3;
         }
         else
         {
@@ -160,8 +167,12 @@ public class Dialogue2 : MonoBehaviour
         {
             currentStory = NPC2;
         }
+        else if (charNum == 3)
+        {
+            currentStory = NPC3;
+        }
         // always check if dialogue is dialoguing
-         if (currentStory.canContinue &&  dialogueisPlaying == true)
+        if (currentStory.canContinue &&  dialogueisPlaying == true)
         {
                 dialoguetxt = currentStory.Continue();
                 StopAllCoroutines();
@@ -192,9 +203,14 @@ public class Dialogue2 : MonoBehaviour
                             nametag = "Lady";
                             nameUI.SetActive(true);
                             break;
-
-
-
+                        case "child":
+                            nametag = "Child";
+                            nameUI.SetActive(true);
+                            break;
+                        case "nerd":
+                            nametag = "Nerd";
+                            nameUI.SetActive(true);
+                            break;
                 }
 
              
@@ -273,14 +289,18 @@ public class Dialogue2 : MonoBehaviour
 
 
             }
-            else if (character == "guy")
+            else if (character == "Child")
             {
                 charNum = 2;
                 EnterDialogueMode(inkFile2);
                 
             }
-           
+            else if (character == "Nerd")
+            {
+                charNum = 3;
+                EnterDialogueMode(inkFile3);
 
+            }
         }
         else
         {

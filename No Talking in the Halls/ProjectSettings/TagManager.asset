@@ -7,6 +7,8 @@ TagManager:
   - testChar
   - guy
   - Lady
+  - Child
+  - Nerd
   layers:
   - Default
   - TransparentFX
