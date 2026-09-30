@@ -2,6 +2,7 @@ using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -172,26 +173,27 @@ public class Dialogue2 : MonoBehaviour
         {
             currentStory = NPC3;
         }
+       
         // always check if dialogue is dialoguing
-        if (currentStory.canContinue &&  dialogueisPlaying == true)
+        if (currentStory != null && currentStory.canContinue && dialogueisPlaying == true)
         {
-                dialoguetxt = currentStory.Continue();
-                StopAllCoroutines();
-                // this is just to make the sentences type out
-                StartCoroutine(TypeSentence(dialoguetxt));
+            dialoguetxt = currentStory.Continue();
+            StopAllCoroutines();
+            // this is just to make the sentences type out
+            StartCoroutine(TypeSentence(dialoguetxt));
 
-                // store the tags in the story...
-                List<string> currentTags = currentStory.currentTags;
-                 // then use these tags
-                foreach (string tag in currentTags)
+            // store the tags in the story...
+            List<string> currentTags = currentStory.currentTags;
+            // then use these tags
+            foreach (string tag in currentTags)
+            {
+                switch (tag.ToLower())
                 {
-                    switch (tag.ToLower())
-                    {
-                        case "wrong":
-                            // subtact from points
-                            Debug.Log("Wrong Choice, Loser");
-                            GameManager.instance.humanChances--;
-                        if (GameManager.instance.humanChances <= 2 )
+                    case "wrong":
+                        // subtact from points
+                        Debug.Log("Wrong Choice, Loser");
+                        GameManager.instance.humanChances--;
+                        if (GameManager.instance.humanChances <= 2)
                         {
                             GameManager.instance.HR1.SetActive(true);
                         }
@@ -206,56 +208,60 @@ public class Dialogue2 : MonoBehaviour
                         }
                         break;
 
-                        case "wrongGhost":
-                        GameManager.instance.ghostChances--;
+                    case "wrongGhost":
+                        //GameManager.instance.ghostChances--;
 
                         //GameManager.instance.Sound3.SetActive(false);
                         break;
 
-                        case "right":
-                            Debug.Log("You're right!");
-                            GameManager.instance.correct++;
-                            if (GameManager.instance.correct == 3)
-                            {
-                                SceneManager.LoadScene("Win");
-                            }
-                            break;
-                        
-                        case "you":     
-                            nametag = "You";
-                            nameUI.SetActive(true);
-                            break;
-                        case "lady":
-                            nametag = "Lady";
-                            nameUI.SetActive(true);
-                            break;
-                        case "child":
-                            nametag = "Child";
-                            nameUI.SetActive(true);
-                            break;
-                        case "nerd":
-                            nametag = "Nerd";
-                            nameUI.SetActive(true);
-                            break;
+                    case "right":
+                        Debug.Log("You're right!");
+                        GameManager.instance.correct++;
+                        if (GameManager.instance.correct == 3)
+                        {
+                            SceneManager.LoadScene("Win");
+                        }
+                        break;
+
+                    case "you":
+                        nametag = "You";
+                        charName.GetComponent<TextMeshProUGUI>().color = new Color(0.3215686f, 0.04705883f, 0.4862745f);
+                        nameUI.SetActive(true);
+                        break;
+                    case "lady":
+                        nametag = "Lady";
+                        charName.GetComponent<TextMeshProUGUI>().color = new Color(0.1843137f, 0.5607843f, 0.3568628f);
+                        nameUI.SetActive(true);
+                        break;
+                    case "child":
+                        nametag = "Child";
+                        charName.GetComponent<TextMeshProUGUI>().color = new Color(0, 0.5764706f, 0.7333333f);
+                        nameUI.SetActive(true);
+                        break;
+                    case "nerd":
+                        nametag = "Nerd";
+                        charName.GetComponent<TextMeshProUGUI>().color = new Color(0.8509805f, 0.7294118f, 0.09803922f);
+                        nameUI.SetActive(true);
+                        break;
                 }
 
-             
-                }
+
+            }
 
             //SpeakerUi(currentTags);
             charName.GetComponent<TextMeshProUGUI>().text = nametag;
-                if(currentStory.currentChoices.Count != 0)
-                {
-                    ShowChoices();
-                }
-
-            }
-            else
+            if (currentStory.currentChoices.Count != 0)
             {
-                exitDialogueMode();
-
-
+                ShowChoices();
             }
+
+        }
+        else
+        {
+            exitDialogueMode();
+
+
+        }
     }
 
     // for input to continue the story    
