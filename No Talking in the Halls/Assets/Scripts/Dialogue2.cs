@@ -180,7 +180,7 @@ public class Dialogue2 : MonoBehaviour
                             Debug.Log("Wrong Choice, Loser");
                             break;
 
-                        case "correct":
+                        case "right":
                             Debug.Log("You're right!");
                             break;
                         
@@ -188,8 +188,8 @@ public class Dialogue2 : MonoBehaviour
                             nametag = "You";
                             nameUI.SetActive(true);
                             break;
-                        case "testchar":
-                            nametag = "testChar";
+                        case "lady":
+                            nametag = "Lady";
                             nameUI.SetActive(true);
                             break;
 
@@ -265,7 +265,7 @@ public class Dialogue2 : MonoBehaviour
             Debug.Log("Ready to talk");
             talking = true;
            
-            if (character == "testChar")
+            if (character == "Lady")
             {
 
                 charNum = 1;
