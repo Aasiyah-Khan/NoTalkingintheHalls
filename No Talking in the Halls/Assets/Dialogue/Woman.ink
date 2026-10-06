@@ -21,7 +21,7 @@ Hi, sorry but you're being to loud. Could you please talk quieter thanks.
 # Lady
 Yes I'm in the romance section, I'm not stupid.
 
-*Tell her to be quiet again
+*[Tell her to be quiet again]
 # you
 SHUT UP!
 
