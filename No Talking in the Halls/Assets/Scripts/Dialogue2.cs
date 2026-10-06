@@ -2,6 +2,7 @@ using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,7 @@ public class Dialogue2 : MonoBehaviour
     Story NPC2;
     Story NPC3;
 
+    // so the script knows what ink file is being read
      Story currentStory;
 
     // more ink stuff
@@ -49,6 +51,9 @@ public class Dialogue2 : MonoBehaviour
     private bool talking;
     private bool interacting;
     private string character;
+
+// to know if player has choice options on screen
+    private bool ismakingChoice;
 
 // where the image sprite for the the character speaking goes
     public GameObject speaker;
@@ -86,7 +91,12 @@ public class Dialogue2 : MonoBehaviour
         nameUI.SetActive(false);
        
         optionPanel.SetActive(false);
-    }
+
+        // set the bools
+        ismakingChoice = false;
+        interacting = false;
+
+}
 
     void Update()
     {
@@ -106,28 +116,38 @@ public class Dialogue2 : MonoBehaviour
         dialogueisPlaying = true;
         dialoguePanel.SetActive(true);
       
+      // depending on the character interacted with the current story file is set
         if (charNum == 1)
         {
             currentStory = NPC1;
+            // to display the first tag in the story 
+       
 
         }
         else if (charNum == 2)
         {
             currentStory = NPC2;
+            // to display the first tag in the story 
+    
         }
         else if (charNum == 3)
         {
             currentStory = NPC3;
+            // to display the first tag in the story 
+        
         }
         else
         {
                 
             exitDialogueMode();
         }
+        
          // if there was UI
         //charUi.SetActive(true);
         dialoguetxt = currentStory.Continue();
         dialogueText.GetComponent<TextMeshProUGUI>().text = dialoguetxt;
+        // so you can see the first tag
+        tagSorter();
     
     }
 
@@ -146,7 +166,7 @@ public class Dialogue2 : MonoBehaviour
         //charUi.SetActive(false); -> unneeded rn
         if(currentNPC.GetComponent<BoxCollider2D>().isTrigger == true)
         {
-             currentNPC.GetComponent<BoxCollider2D>().isTrigger = false;
+             currentNPC.GetComponent<BoxCollider2D>().enabled = false;
              Debug.Log("trigger removed");
         }
         else
@@ -173,6 +193,12 @@ public class Dialogue2 : MonoBehaviour
         {
             currentStory = NPC3;
         }
+
+        // if youre in choice mode just end this whole thing
+        if (ismakingChoice || !dialogueisPlaying || currentStory == null)
+        {
+            return;
+        }
        
         // always check if dialogue is dialoguing
         if (currentStory != null && currentStory.canContinue && dialogueisPlaying == true)
@@ -182,11 +208,36 @@ public class Dialogue2 : MonoBehaviour
             // this is just to make the sentences type out
             StartCoroutine(TypeSentence(dialoguetxt));
 
+            // run my tag sorter function
+            tagSorter(); 
+            //SpeakerUi(currentTags);
+           
+            if (currentStory.currentChoices.Count != 0)
+            {
+                ShowChoices();
+            }
+
+        }
+        else
+        {
+            exitDialogueMode();
+
+
+        }
+    }
+
+    // a method to show nametags and control other things based on ink tags
+    // moved this so i dont have to repeat it
+    void tagSorter()
+    {
+        
             // store the tags in the story...
             List<string> currentTags = currentStory.currentTags;
             // then use these tags
             foreach (string tag in currentTags)
             {
+                // so its case insensitive turn everything to lowercase
+                // all tested cases must be lowercase regardless of their original spelling
                 switch (tag.ToLower())
                 {
                     case "wrong":
@@ -208,7 +259,7 @@ public class Dialogue2 : MonoBehaviour
                         }
                         break;
 
-                    case "wrongGhost":
+                    case "wrongghost":
                         //GameManager.instance.ghostChances--;
 
                         //GameManager.instance.Sound3.SetActive(false);
@@ -247,30 +298,20 @@ public class Dialogue2 : MonoBehaviour
 
 
             }
-
-            //SpeakerUi(currentTags);
-            charName.GetComponent<TextMeshProUGUI>().text = nametag;
-            if (currentStory.currentChoices.Count != 0)
-            {
-                ShowChoices();
-            }
-
-        }
-        else
-        {
-            exitDialogueMode();
-
-
-        }
+             charName.GetComponent<TextMeshProUGUI>().text = nametag;
     }
 
     // for input to continue the story    
     public void continueStory(UnityEngine.InputSystem.InputAction.CallbackContext callbackContext)
     {
-        if (callbackContext.performed)
+        // i need to check if there even is a character being interacted with... 
+        // also need to make sure tehre are no choices on the screen
+        if (callbackContext.performed && currentStory != null && ismakingChoice == false && dialogueisPlaying )
         {
+            // then run whatever is in the continue story function
             storyCon();
         }
+        
     }
 
     // coroutine for typing char by char
@@ -281,6 +322,7 @@ public class Dialogue2 : MonoBehaviour
         {
             message += letter;
             dialogueText.GetComponent<TextMeshProUGUI>().text = message;
+            // how fast each letter appears
             yield return new WaitForSeconds(0.02f);
         }
     }
@@ -291,8 +333,10 @@ public class Dialogue2 : MonoBehaviour
     {
         Debug.Log("Entered trigger");
 
+        // the current character is set to whatever one you triggered
         character = collider.tag;
 
+        // now that interacting is true, you can press E
         interacting = true;
         Debug.Log("Is interacting");
 
@@ -304,6 +348,8 @@ public class Dialogue2 : MonoBehaviour
         interacting = false;
     }
 
+
+// for when you press E
     public void Interact()
     {
 
@@ -315,9 +361,10 @@ public class Dialogue2 : MonoBehaviour
            
             if (character == "Lady")
             {
-
+                // this way of doing things is so uncessary but yeah the character number is also set
                 charNum = 1;
                 EnterDialogueMode(inkFile);
+            
 
 
             }
@@ -336,14 +383,17 @@ public class Dialogue2 : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Script Not Found");
+            Debug.Log("Script Not Found");
         }
     }
 
 
-
+    // this is when a choice appears
      void ShowChoices()
     {
+        // now i shouldnt be able to continue with the story until a choice is made
+        ismakingChoice = true;
+        // i think i can remove this var
         isWaitingForChoice = true;
         optionPanel.SetActive(true);
 
@@ -357,6 +407,7 @@ public class Dialogue2 : MonoBehaviour
 
         for (int i = 0; i < choices.Count; i++)
         {
+            // make the choice buttons appear for as many choices are available 
             GameObject buttonObj = Instantiate(buttons, optionPanel.transform);
             buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = choices[i].text;
 
@@ -376,15 +427,20 @@ public class Dialogue2 : MonoBehaviour
         
        // hide my UI
         optionPanel.SetActive(false);
+        // once again i think this var is the same as the one below...
         isWaitingForChoice = false;
+         ismakingChoice = false;
+        // make it so that you can press continue again
+        //ismakingChoice = false;
         // continue the story
          storyCon();
+        
 
     }
 
 
 
-}
+} 
 
 
 

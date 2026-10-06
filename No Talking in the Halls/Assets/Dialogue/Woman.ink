@@ -36,7 +36,7 @@ Sorry I will talk quieter.
 # right
 She starts angryly whishper on the phone.
 
-*Spray water on her.
+*[Spray water on her.]
 
 # Lady
 Ahhh, why the hell would you do that!
