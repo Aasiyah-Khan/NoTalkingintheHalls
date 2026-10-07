@@ -22,6 +22,7 @@ Hi, sorry but you're being to loud. Could you please talk quieter thanks.
 Yes I'm in the romance section, I'm not stupid.
 
 *[Tell her to be quiet again]
+
 # you
 SHUT UP!
 
@@ -33,7 +34,7 @@ I respect someone who takes their job seriously.
 
 Sorry I will talk quieter.
 
-# right
+# rightlady
 She starts angryly whishper on the phone.
 
 *[Spray water on her.]
@@ -44,5 +45,5 @@ Ahhh, why the hell would you do that!
 # Lady
 I'm filing a complaint.
 
-# wrong
+# wronglady
 She is soaking wet and angry.

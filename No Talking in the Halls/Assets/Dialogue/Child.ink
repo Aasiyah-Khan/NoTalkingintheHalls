@@ -27,6 +27,7 @@ WAAAAA WAAAAA!
 This guy is harrasing me!
 
 *Tell him to stop it!
+
 # you
 SHUT UP!
 
@@ -39,7 +40,7 @@ I'll give you another lolipop if you just be quiet.
 # Child
 Pleasure doing business with you.
 
-# right
+# rightchild
 He happily licks both lolipops.
 
 *Spray water on him.
@@ -47,5 +48,5 @@ He happily licks both lolipops.
 # Child
 WAAAAAAAAAAAAAAAAAAAAAAAA!
 
-# wrong
+# wrongchild
 Everyone heard that and someone filied complaint against you.

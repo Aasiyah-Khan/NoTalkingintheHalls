@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 032ebe56bb9043849aff6ca88aa35413
+guid: 55269c1c7158c4c499810ec08dcc7677
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7161127024414143864
-    second: BuffGuyNeutral_0
+      213: -858593381806155233
+    second: BookPurple_0
   - first:
-      213: 5579303784794729360
-    second: BuffGuyNeutral_1
+      213: 3213986155937298923
+    second: BookPurple_1
   - first:
-      213: 5652602409914204625
-    second: BuffGuyNeutral_2
+      213: 6986725898377835555
+    second: BookPurple_2
+  - first:
+      213: -2391325425286579408
+    second: BookPurple_3
+  - first:
+      213: 4926553493610990777
+    second: BookPurple_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BuffGuyNeutral_0
+      name: BookPurple_0
       rect:
         serializedVersion: 2
-        x: 200
-        y: 391
-        width: 114
-        height: 109
+        x: 1027
+        y: 316
+        width: 490
+        height: 732
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88a485e99e09e9c90800000000000000
-      internalID: -7161127024414143864
+      spriteID: f1a51f64ed9a514f0800000000000000
+      internalID: -858593381806155233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffGuyNeutral_1
+      name: BookPurple_1
       rect:
         serializedVersion: 2
-        x: 335
-        y: 144
-        width: 264
-        height: 562
+        x: 1394
+        y: 1041
+        width: 17
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09baeaa5b3bad6d40800000000000000
-      internalID: 5579303784794729360
+      spriteID: be97aa1616f5a9c20800000000000000
+      internalID: 3213986155937298923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffGuyNeutral_2
+      name: BookPurple_2
       rect:
         serializedVersion: 2
-        x: 615
-        y: 428
-        width: 112
-        height: 96
+        x: 1432
+        y: 1031
+        width: 36
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +186,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d1047b61f3127e40800000000000000
-      internalID: 5652602409914204625
+      spriteID: 32435d3ff26d5f060800000000000000
+      internalID: 6986725898377835555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BookPurple_3
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 483
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bfe6b023e40ded0800000000000000
+      internalID: -2391325425286579408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BookPurple_4
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 491
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc84a9ec42ae5440800000000000000
+      internalID: 4926553493610990777
       vertices: []
       indices: 
       edges: []
@@ -200,9 +250,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BuffGuyNeutral_0: -7161127024414143864
-      BuffGuyNeutral_1: 5579303784794729360
-      BuffGuyNeutral_2: 5652602409914204625
+      BookPurple_0: -858593381806155233
+      BookPurple_1: 3213986155937298923
+      BookPurple_2: 6986725898377835555
+      BookPurple_3: -2391325425286579408
+      BookPurple_4: 4926553493610990777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

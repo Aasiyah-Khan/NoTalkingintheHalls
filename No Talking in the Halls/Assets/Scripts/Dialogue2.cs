@@ -240,59 +240,175 @@ public class Dialogue2 : MonoBehaviour
                 // all tested cases must be lowercase regardless of their original spelling
                 switch (tag.ToLower())
                 {
-                    case "wrong":
-                        // subtact from points
-                        Debug.Log("Wrong Choice, Loser");
-                        GameManager.instance.humanChances--;
-                        if (GameManager.instance.humanChances <= 2)
-                        {
-                            GameManager.instance.HR1.SetActive(true);
-                        }
-                        if (GameManager.instance.humanChances <= 1)
-                        {
-                            GameManager.instance.HR2.SetActive(true);
-                        }
-                        if (GameManager.instance.humanChances <= 0)
-                        {
-                            GameManager.instance.HR3.SetActive(true);
-                            SceneManager.LoadScene("Lose");
-                        }
+                        case "wronglady":
+                            // subtact from points
+                            Debug.Log("Wrong Choice, Loser");
+                            GameManager.instance.humanChances--;
+                            GameManager.instance.LadyNeutral.SetActive(false);
+                            GameManager.instance.LadyUpset.SetActive(true);
+                            if (GameManager.instance.humanChances <= 2)
+                            {
+                                GameManager.instance.HR1.SetActive(true);
+                            }
+                            if (GameManager.instance.humanChances <= 1)
+                            {
+                                GameManager.instance.HR2.SetActive(true);
+                            }
+                            if (GameManager.instance.humanChances <= 0)
+                            {
+                                GameManager.instance.HR3.SetActive(true);
+                                SceneManager.LoadScene("Lose");
+                            }
                         break;
 
-                    case "wrongghost":
-                        //GameManager.instance.ghostChances--;
-
-                        //GameManager.instance.Sound3.SetActive(false);
+                        case "wrongchild":
+                            // subtact from points
+                            Debug.Log("Wrong Choice, Loser");
+                            GameManager.instance.humanChances--;
+                            GameManager.instance.ChildNeutral.SetActive(false);
+                            GameManager.instance.ChildUpset.SetActive(true);
+                            if (GameManager.instance.humanChances <= 2)
+                            {
+                                GameManager.instance.HR1.SetActive(true);
+                            }
+                            if (GameManager.instance.humanChances <= 1)
+                            {
+                                GameManager.instance.HR2.SetActive(true);
+                            }
+                            if (GameManager.instance.humanChances <= 0)
+                            {
+                                GameManager.instance.HR3.SetActive(true);
+                                SceneManager.LoadScene("Lose");
+                            }
                         break;
 
-                    case "right":
-                        Debug.Log("You're right!");
-                        GameManager.instance.correct++;
-                        if (GameManager.instance.correct == 3)
-                        {
-                            SceneManager.LoadScene("Win");
-                        }
+                        case "wrongnerd":
+                            // subtact from points
+                            Debug.Log("Wrong Choice, Loser");
+                            GameManager.instance.humanChances--;
+                            GameManager.instance.ChildNeutral.SetActive(false);
+                            GameManager.instance.ChildUpset.SetActive(true);
+                            if (GameManager.instance.humanChances <= 2)
+                            {
+                                GameManager.instance.HR1.SetActive(true);
+                            }
+                            if (GameManager.instance.humanChances <= 1)
+                            {
+                                GameManager.instance.HR2.SetActive(true);
+                            }
+                            if (GameManager.instance.humanChances <= 0)
+                            {
+                                GameManager.instance.HR3.SetActive(true);
+                                SceneManager.LoadScene("Lose");
+                            }
                         break;
 
-                    case "you":
-                        nametag = "You";
-                        charName.GetComponent<TextMeshProUGUI>().color = new Color(0.3215686f, 0.04705883f, 0.4862745f);
-                        nameUI.SetActive(true);
+                        case "wrongghost1":
+                            GameManager.instance.ghostChances--;
+                            GameManager.instance.Sound1.SetActive(false);
+                            if (GameManager.instance.ghostChances <= 2)
+                            {
+                                GameManager.instance.Ghost1.SetActive(true);
+                            }
+                            if (GameManager.instance.ghostChances <= 1)
+                            {
+                                GameManager.instance.Ghost2.SetActive(true);
+                            }
+                            if (GameManager.instance.ghostChances <= 0)
+                            {
+                                GameManager.instance.Ghost3.SetActive(true);
+                                SceneManager.LoadScene("Lose");
+                            }
                         break;
-                    case "lady":
-                        nametag = "Lady";
-                        charName.GetComponent<TextMeshProUGUI>().color = new Color(0.1843137f, 0.5607843f, 0.3568628f);
-                        nameUI.SetActive(true);
+
+                        case "wrongghost2":
+                            GameManager.instance.ghostChances--;
+                            GameManager.instance.Sound2.SetActive(false);
+                            if (GameManager.instance.ghostChances <= 2)
+                            {
+                                GameManager.instance.Ghost1.SetActive(true);
+                            }
+                            if (GameManager.instance.ghostChances <= 1)
+                            {
+                                GameManager.instance.Ghost2.SetActive(true);
+                            }
+                            if (GameManager.instance.ghostChances <= 0)
+                            {
+                                GameManager.instance.Ghost3.SetActive(true);
+                                SceneManager.LoadScene("Lose");
+                            }
                         break;
-                    case "child":
-                        nametag = "Child";
-                        charName.GetComponent<TextMeshProUGUI>().color = new Color(0, 0.5764706f, 0.7333333f);
-                        nameUI.SetActive(true);
+
+                        case "wrongghost3":
+                            GameManager.instance.ghostChances--;
+                            GameManager.instance.Sound3.SetActive(false);
+                            if (GameManager.instance.ghostChances <= 2)
+                            {
+                                GameManager.instance.Ghost1.SetActive(true);
+                            }
+                            if (GameManager.instance.ghostChances <= 1)
+                            {
+                                GameManager.instance.Ghost2.SetActive(true);
+                            }
+                            if (GameManager.instance.ghostChances <= 0)
+                            {
+                                GameManager.instance.Ghost3.SetActive(true);
+                                SceneManager.LoadScene("Lose");
+                            }
                         break;
-                    case "nerd":
-                        nametag = "Nerd";
-                        charName.GetComponent<TextMeshProUGUI>().color = new Color(0.8509805f, 0.7294118f, 0.09803922f);
-                        nameUI.SetActive(true);
+
+                        case "rightlady":
+                            Debug.Log("You're right!");
+                            GameManager.instance.correct++;
+                            GameManager.instance.LadyNeutral.SetActive(false);
+                            GameManager.instance.LadyHappy.SetActive(true);
+                            if (GameManager.instance.correct == 3)
+                            {
+                                SceneManager.LoadScene("Win");
+                            }
+                        break;
+
+                        case "rightchild":
+                            Debug.Log("You're right!");
+                            GameManager.instance.correct++;
+                            GameManager.instance.ChildNeutral.SetActive(false);
+                            GameManager.instance.ChildHappy.SetActive(true);
+                            if (GameManager.instance.correct == 3)
+                            {
+                                SceneManager.LoadScene("Win");
+                            }
+                        break;
+
+                        case "rightnerd":
+                            Debug.Log("You're right!");
+                            GameManager.instance.correct++;
+                            GameManager.instance.NerdNeutral.SetActive(false);
+                            GameManager.instance.NerdHappy.SetActive(true);
+                            if (GameManager.instance.correct == 3)
+                            {
+                                SceneManager.LoadScene("Win");
+                            }
+                        break;
+
+                        case "you":
+                            nametag = "You";
+                            charName.GetComponent<TextMeshProUGUI>().color = new Color(0.3215686f, 0.04705883f, 0.4862745f);
+                            nameUI.SetActive(true);
+                        break;
+                        case "lady":
+                            nametag = "Lady";
+                            charName.GetComponent<TextMeshProUGUI>().color = new Color(0.1843137f, 0.5607843f, 0.3568628f);
+                            nameUI.SetActive(true);
+                        break;
+                        case "child":
+                            nametag = "Child";
+                            charName.GetComponent<TextMeshProUGUI>().color = new Color(0, 0.5764706f, 0.7333333f);
+                            nameUI.SetActive(true);
+                        break;
+                        case "nerd":
+                            nametag = "Nerd";
+                            charName.GetComponent<TextMeshProUGUI>().color = new Color(0.8509805f, 0.7294118f, 0.09803922f);
+                            nameUI.SetActive(true);
                         break;
                 }
 

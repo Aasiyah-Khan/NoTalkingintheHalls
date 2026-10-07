@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 032ebe56bb9043849aff6ca88aa35413
+guid: 9a77e1a5361f8d443ac29e6a0a8fb8b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7161127024414143864
-    second: BuffGuyNeutral_0
+      213: 2540077078063740169
+    second: BookTeal_0
   - first:
-      213: 5579303784794729360
-    second: BuffGuyNeutral_1
+      213: 4578499376490244599
+    second: BookTeal_1
   - first:
-      213: 5652602409914204625
-    second: BuffGuyNeutral_2
+      213: 8434530923219961245
+    second: BookTeal_2
+  - first:
+      213: -5627286026259417995
+    second: BookTeal_3
+  - first:
+      213: -4440170067654334556
+    second: BookTeal_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BuffGuyNeutral_0
+      name: BookTeal_0
       rect:
         serializedVersion: 2
-        x: 200
-        y: 391
-        width: 114
-        height: 109
+        x: 1062
+        y: 341
+        width: 490
+        height: 732
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88a485e99e09e9c90800000000000000
-      internalID: -7161127024414143864
+      spriteID: 905f91405aa204320800000000000000
+      internalID: 2540077078063740169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffGuyNeutral_1
+      name: BookTeal_1
       rect:
         serializedVersion: 2
-        x: 335
-        y: 144
-        width: 264
-        height: 562
+        x: 1429
+        y: 1066
+        width: 17
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09baeaa5b3bad6d40800000000000000
-      internalID: 5579303784794729360
+      spriteID: 7f96c0ccce81a8f30800000000000000
+      internalID: 4578499376490244599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffGuyNeutral_2
+      name: BookTeal_2
       rect:
         serializedVersion: 2
-        x: 615
-        y: 428
-        width: 112
-        height: 96
+        x: 1467
+        y: 1056
+        width: 36
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +186,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d1047b61f3127e40800000000000000
-      internalID: 5652602409914204625
+      spriteID: d95c295cf297d0570800000000000000
+      internalID: 8434530923219961245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BookTeal_3
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 508
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574b94b7c2dd7e1b0800000000000000
+      internalID: -5627286026259417995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BookTeal_4
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 516
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7242739d85162c0800000000000000
+      internalID: -4440170067654334556
       vertices: []
       indices: 
       edges: []
@@ -200,9 +250,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BuffGuyNeutral_0: -7161127024414143864
-      BuffGuyNeutral_1: 5579303784794729360
-      BuffGuyNeutral_2: 5652602409914204625
+      BookTeal_0: 2540077078063740169
+      BookTeal_1: 4578499376490244599
+      BookTeal_2: 8434530923219961245
+      BookTeal_3: -5627286026259417995
+      BookTeal_4: -4440170067654334556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

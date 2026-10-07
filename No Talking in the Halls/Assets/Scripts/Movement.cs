@@ -57,6 +57,22 @@ public class movement : MonoBehaviour
     {
         MoveInput = context.ReadValue<Vector2>();
         //animator.SetFloat("speed",);
+
+
+        //if (callbackContext.ReadValue<float>() == 1f)
+        //{
+        //    rb.linearVelocityX = 5;
+        //    this.gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+        //}
+        //else if (callbackContext.ReadValue<float>() == -1f)
+        //{
+        //    rb.linearVelocityX = -5;
+        //    this.gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
+        //}
+        //else
+        //{
+        //    rb.linearVelocityX = 0;
+        //}
     }
 
     //void OnTriggerEnter2D(UnityEngine.Collider2D collision)

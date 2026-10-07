@@ -30,7 +30,17 @@ public class GameManager : MonoBehaviour
     public GameObject Sound2;
     public GameObject Sound3;
 
+    public GameObject LadyNeutral;
+    public GameObject LadyHappy;
+    public GameObject LadyUpset;
 
+    public GameObject ChildNeutral;
+    public GameObject ChildHappy;
+    public GameObject ChildUpset;
+
+    public GameObject NerdNeutral;
+    public GameObject NerdHappy;
+    public GameObject NerdUpset;
 
     void Awake()
     {

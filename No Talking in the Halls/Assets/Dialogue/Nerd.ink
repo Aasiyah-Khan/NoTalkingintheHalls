@@ -37,10 +37,11 @@ Now can you guys nerd out a bit quieter for me please? Thanks.
 # Nerd
 Sure, no problem.
 
-# right
+# rightnerd
 He continues to talk about comic book superheroes with everyone more quietly.
 
-*Silence him.
+*Spary water on him.
+
 # you
 SHUT UP!
 
@@ -59,5 +60,5 @@ Don't make me come back.
 # Nerd
 Geez sorry, whatever dude.
 
-# wrong
+# wrongnerd
 He cries about his ruined comic book and a complaint gets filed against you.

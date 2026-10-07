@@ -1,0 +1,652 @@
+fileFormatVersion: 2
+guid: 6ba79860278d41c4fbc97ae25f9a9bcd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2228549504730452918
+    second: Library title_0
+  - first:
+      213: -2019280435474040357
+    second: Library title_1
+  - first:
+      213: -3548565724190366158
+    second: Library title_2
+  - first:
+      213: -8783767003756856914
+    second: Library title_3
+  - first:
+      213: -2721990585427607734
+    second: Library title_4
+  - first:
+      213: -5369959651515033617
+    second: Library title_5
+  - first:
+      213: -5160312365877610115
+    second: Library title_6
+  - first:
+      213: 5665391353937261342
+    second: Library title_7
+  - first:
+      213: 8826545434801694193
+    second: Library title_8
+  - first:
+      213: -5601354769109081814
+    second: Library title_9
+  - first:
+      213: 8613136565945001497
+    second: Library title_10
+  - first:
+      213: 4161778013374580649
+    second: Library title_11
+  - first:
+      213: 5441070123168904450
+    second: Library title_12
+  - first:
+      213: -4452247060601596516
+    second: Library title_13
+  - first:
+      213: -7664129936917139111
+    second: Library title_14
+  - first:
+      213: 7083372705908371231
+    second: Library title_15
+  - first:
+      213: -6813891686024869384
+    second: Library title_16
+  - first:
+      213: -5168242835265257796
+    second: Library title_17
+  - first:
+      213: -2333839838045608162
+    second: Library title_18
+  - first:
+      213: -6504534224711644606
+    second: Library title_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Library title_0
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 737
+        width: 229
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b3d4d997f56dee10800000000000000
+      internalID: 2228549504730452918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_1
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 838
+        width: 108
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd97cad74231af3e0800000000000000
+      internalID: -2019280435474040357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_2
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 850
+        width: 223
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 236a1836646f0cec0800000000000000
+      internalID: -3548565724190366158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_3
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 893
+        width: 163
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9764fc27ac91680800000000000000
+      internalID: -8783767003756856914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_4
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 901
+        width: 36
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f31a9fbfb893ad0800000000000000
+      internalID: -2721990585427607734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_5
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 884
+        width: 118
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe71441f5221a75b0800000000000000
+      internalID: -5369959651515033617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_6
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 913
+        width: 26
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d793fc56e33e268b0800000000000000
+      internalID: -5160312365877610115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_7
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 900
+        width: 97
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13fffc7b638f9e40800000000000000
+      internalID: 5665391353937261342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_8
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 781
+        width: 144
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f56333de403e7a70800000000000000
+      internalID: 8826545434801694193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_9
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 657
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a212056c38df342b0800000000000000
+      internalID: -5601354769109081814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_10
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 497
+        width: 38
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91664178212088770800000000000000
+      internalID: 8613136565945001497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_11
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 525
+        width: 125
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a709399d0b91c930800000000000000
+      internalID: 4161778013374580649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_12
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 549
+        width: 103
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2053971f270928b40800000000000000
+      internalID: 5441070123168904450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_13
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 551
+        width: 117
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95909c23e07632c0800000000000000
+      internalID: -4452247060601596516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_14
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 586
+        width: 170
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951fd9dbd6a83a590800000000000000
+      internalID: -7664129936917139111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_15
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 127
+        width: 291
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1fad5b52f13d4260800000000000000
+      internalID: 7083372705908371231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_16
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 136
+        width: 269
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f90084fc913071a0800000000000000
+      internalID: -6813891686024869384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_17
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 143
+        width: 186
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe7e0b1686b648b0800000000000000
+      internalID: -5168242835265257796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_18
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 190
+        width: 163
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17e2a258098c9fd0800000000000000
+      internalID: -2333839838045608162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Library title_19
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 197
+        width: 208
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a01bac5904bb5a0800000000000000
+      internalID: -6504534224711644606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Library title_0: 2228549504730452918
+      Library title_1: -2019280435474040357
+      Library title_10: 8613136565945001497
+      Library title_11: 4161778013374580649
+      Library title_12: 5441070123168904450
+      Library title_13: -4452247060601596516
+      Library title_14: -7664129936917139111
+      Library title_15: 7083372705908371231
+      Library title_16: -6813891686024869384
+      Library title_17: -5168242835265257796
+      Library title_18: -2333839838045608162
+      Library title_19: -6504534224711644606
+      Library title_2: -3548565724190366158
+      Library title_3: -8783767003756856914
+      Library title_4: -2721990585427607734
+      Library title_5: -5369959651515033617
+      Library title_6: -5160312365877610115
+      Library title_7: 5665391353937261342
+      Library title_8: 8826545434801694193
+      Library title_9: -5601354769109081814
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
