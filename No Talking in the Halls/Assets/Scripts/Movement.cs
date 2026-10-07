@@ -8,11 +8,12 @@ public class movement : MonoBehaviour
 
     public Camera mainCam;
 
-   // float outsideX;
+    // float outsideX;
     //float outsideY;
 
     //public Canvas Canvas;
-    
+
+    [SerializeField] private Animator anim;
     
      public Vector2 MoveInput { get; private set; }
 
@@ -21,10 +22,7 @@ public class movement : MonoBehaviour
     {
         // start inside
        //mainCam.GetComponent<Transform>().position = new Vector3(25, 1.5f, -10);
-        rb = this.gameObject.GetComponent<Rigidbody2D>();
-        
-       
-        
+        rb = this.gameObject.GetComponent<Rigidbody2D>();       
         
     }  
     // Update is called once per frame
@@ -35,22 +33,29 @@ public class movement : MonoBehaviour
         Vector2 movement = MoveInput * moveSpeed;
         rb.linearVelocity = movement;
 
-    if (MoveInput.x > 0) // Moving right
-    {
-       // transform.localScale = new Vector3(3.5f, 3.5f, 1); 
-    }
-    else if (MoveInput.x < 0) // Moving left
-    {
-       // transform.localScale = new Vector3(-3.5f, 3.5f, 1);
-    }
 
+        if (MoveInput.x > 0) // Moving right
+        {
+           // transform.localScale = new Vector3(3.5f, 3.5f, 1); 
+        }
+        else if (MoveInput.x < 0) // Moving left
+        {
+           // transform.localScale = new Vector3(-3.5f, 3.5f, 1);
+        }
+
+        Debug.Log(moveSpeed);
 
         //animator.SetFloat("speed", Mathf.Abs(MoveInput.x));
         //animator.SetFloat("speedy", Mathf.Abs(MoveInput.y));
 
-        
-        
-        
+        if (MoveInput.x > 0) // Moving right
+        {
+            transform.localScale = new Vector3(1.0f, 1.0f, 1);
+        }
+        else if (MoveInput.x < 0) // Moving left
+        {
+            transform.localScale = new Vector3(-1.0f, 1.0f, 1);
+        }
     }
 
     public void OnMove(UnityEngine.InputSystem.InputAction.CallbackContext context)
@@ -73,6 +78,17 @@ public class movement : MonoBehaviour
         //{
         //    rb.linearVelocityX = 0;
         //}
+
+        if (MoveInput.x != 0)
+        {
+            anim.SetBool("isRunning", true);
+        }
+        
+        if (MoveInput.x == 0)
+        {
+            Debug.Log("Anim stop");
+            anim.SetBool("isRunning", false);
+        }
     }
 
     //void OnTriggerEnter2D(UnityEngine.Collider2D collision)

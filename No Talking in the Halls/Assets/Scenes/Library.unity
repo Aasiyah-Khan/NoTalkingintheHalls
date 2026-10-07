@@ -2672,6 +2672,7 @@ GameObject:
   - component: {fileID: 395689868}
   - component: {fileID: 395689869}
   - component: {fileID: 395689870}
+  - component: {fileID: 395689871}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2772,6 +2773,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   animator: {fileID: 0}
   mainCam: {fileID: 0}
+  anim: {fileID: 395689871}
 --- !u!61 &395689864
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2967,6 +2969,28 @@ MonoBehaviour:
   speaker: {fileID: 0}
   optionPanel: {fileID: 815390710}
   buttons: {fileID: 7826221271020212917, guid: e752184782f63ac43bf5c0e98115580d, type: 3}
+--- !u!95 &395689871
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395689861}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 923c419a65b28444e927e5adcaff0d7a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &416608736
 GameObject:
   m_ObjectHideFlags: 0
@@ -9712,7 +9736,7 @@ Transform:
   m_GameObject: {fileID: 1531277713}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13649,6 +13673,18 @@ PrefabInstance:
     - target: {fileID: 2663666245673298285, guid: e752184782f63ac43bf5c0e98115580d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317814500463914840, guid: e752184782f63ac43bf5c0e98115580d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317814500463914840, guid: e752184782f63ac43bf5c0e98115580d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7344075302856855072, guid: b79d86cfb19a2614a9190a7e046fdeb5, type: 3}
+    - target: {fileID: 3436925659598895110, guid: e752184782f63ac43bf5c0e98115580d, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 2048
       objectReference: {fileID: 0}
     - target: {fileID: 7826221271020212917, guid: e752184782f63ac43bf5c0e98115580d, type: 3}
       propertyPath: m_Name
