@@ -421,7 +421,7 @@ public class Dialogue2 : MonoBehaviour
                             GameManager.instance.correct++;
                             GameManager.instance.LadyNeutral.SetActive(false);
                             GameManager.instance.LadyHappy.SetActive(true);
-                            crowd.volume -= 0.25f;
+                            crowd.volume -= 0.17f;
                             if (GameManager.instance.correct == 3)
                             {
                                 SceneManager.LoadScene("Win");
@@ -433,7 +433,7 @@ public class Dialogue2 : MonoBehaviour
                             GameManager.instance.correct++;
                             GameManager.instance.ChildNeutral.SetActive(false);
                             GameManager.instance.ChildHappy.SetActive(true);
-                            crowd.volume -= 0.25f;
+                            crowd.volume -= 0.17f;
                             if (GameManager.instance.correct == 3)
                             {
                                 SceneManager.LoadScene("Win");
@@ -445,7 +445,7 @@ public class Dialogue2 : MonoBehaviour
                             GameManager.instance.correct++;
                             GameManager.instance.NerdNeutral.SetActive(false);
                             GameManager.instance.NerdHappy.SetActive(true);
-                            crowd.volume -= 0.25f;
+                            crowd.volume -= 0.17f;
                             if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
@@ -457,6 +457,7 @@ public class Dialogue2 : MonoBehaviour
                             GameManager.instance.correct++;
                             GameManager.instance.GentlemanNeutral.SetActive(false);
                             GameManager.instance.Sound1.SetActive(false);
+                            crowd.volume -= 0.17f;
                             if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
@@ -466,8 +467,9 @@ public class Dialogue2 : MonoBehaviour
                         case "rightbuff":
                             Debug.Log("You're right!");
                             GameManager.instance.correct++;
-                            GameManager.instance.GentlemanNeutral.SetActive(false);
+                            GameManager.instance.BuffGuyNeutral.SetActive(false);
                             GameManager.instance.Sound2.SetActive(false);
+                            crowd.volume -= 0.17f;
                             if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
@@ -479,6 +481,7 @@ public class Dialogue2 : MonoBehaviour
                             GameManager.instance.correct++;
                             GameManager.instance.ThespianNeutral.SetActive(false);
                             GameManager.instance.Sound3.SetActive(false);
+                            crowd.volume -= 0.15f;
                             if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
@@ -654,11 +657,29 @@ public class Dialogue2 : MonoBehaviour
                 EnterDialogueMode(inkFile3);
 
             }
+            else if (character == "Gentleman")
+            {
+                charNum = 4;
+                EnterDialogueMode(inkFile4);
+
+            }
+            else if (character == "Buff Guy")
+            {
+                charNum = 5;
+                EnterDialogueMode(inkFile5);
+
+            }
+            else if (character == "Thespian")
+            {
+                charNum = 6;
+                EnterDialogueMode(inkFile6);
+
+            }
         }
-        else
-        {
-            Debug.Log("Script Not Found");
-        }
+            else
+            {
+                Debug.Log("Script Not Found");
+            }
     }
 
 

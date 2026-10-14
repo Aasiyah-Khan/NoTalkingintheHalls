@@ -1,4 +1,4 @@
-You see a Lady tallking on the phone with someone.
+You see a Lady talking on the phone with someone.
 
 # Lady
 I can't find your stupid book.
@@ -16,7 +16,7 @@ Hold on someone is trying to talk to me.
 Yes? What do you want?
 
 # you
-Hi, sorry but you're being to loud. Could you please talk quieter thanks.
+Hi, sorry but you're being too loud. Could you please talk quieter please?
 
 # Lady
 Yes I'm in the romance section, I'm not stupid.
@@ -35,7 +35,7 @@ I respect someone who takes their job seriously.
 Sorry I will talk quieter.
 
 # rightlady
-She starts angryly whishper on the phone.
+She starts whispering on the phone angrily.
 
 *[Spray water on her.]
 

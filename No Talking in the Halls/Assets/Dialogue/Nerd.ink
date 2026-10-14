@@ -3,9 +3,9 @@ You see a nerd explaining the entire lore of a superhero to a group of people.
 He seems very enthusiastic and being very noisy.
 
 # Nerd
-So you see that's why Pogo-Stick Man is the best hero out there!
+So, you see that's why Pogo-Stick Man is the best hero out there!
 
-Oh you should also check out the comic where Pogo-Stick Man becomes the Pogo-Stick!
+Oh, you should also check out the comic where Pogo-Stick Man becomes the Pogo-Stick!
 
 # you
 Could you guys keep it down, we're in a library remember.
@@ -40,7 +40,7 @@ Sure, no problem.
 # rightnerd
 He continues to talk about comic book superheroes with everyone more quietly.
 
-*[Spary water on him.]
+*[Spray water on him.]
 
 # you
 SHUT UP!
@@ -51,9 +51,9 @@ SHUT UP!
 MY LIMITED EDITION COMIC BOOK!
 
 # you
-Ghost Guy is a very relatable character and he is so much better than dumb PoGo-StIcK MaN!
+Ghost Guy is a very relatable character, and he is so much better than dumb PoGo-StIcK MaN!
 
-Just be quiet over here
+Just be quiet over here.
 
 Don't make me come back.
 
@@ -61,4 +61,4 @@ Don't make me come back.
 Geez sorry, whatever dude.
 
 # wrongnerd
-He cries about his ruined comic book and a complaint gets filed against you.
+He cries about his ruined comic book, and a complaint gets filed against you.
