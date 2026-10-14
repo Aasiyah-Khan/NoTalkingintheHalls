@@ -1,4 +1,4 @@
-You see a child making a ruckus and licking his lolipop.
+You see a child making a ruckus and licking his lollipop.
 
 There are books all over the floor. Seems like they were knocked of the bookshelves.
 
@@ -13,7 +13,7 @@ Who are you?
 You can't tell me what to do, you're not my mom.
 
 # you
-I'm the libraian and you're destroying these books.
+I'm the librarian and you're destroying these books.
 
 # Child
 More like loser!
@@ -24,7 +24,7 @@ What! I'm not a los-
 # Child
 WAAAAA WAAAAA!
 
-This guy is harrasing me!
+This guy is harassing me!
 
 *[Tell him to stop it!]
 
@@ -35,13 +35,13 @@ SHUT UP!
 ...
 
 # you
-I'll give you another lolipop if you just be quiet.
+I'll give you another lollipop if you just be quiet.
 
 # Child
 Pleasure doing business with you.
 
 # rightchild
-He happily licks both lolipops.
+He happily licks both lollipops.
 
 *[Spray water on him.]
 
@@ -49,4 +49,4 @@ He happily licks both lolipops.
 WAAAAAAAAAAAAAAAAAAAAAAAA!
 
 # wrongchild
-Everyone heard that and someone filied complaint against you.
+Everyone heard that and someone filed complaint against you.
