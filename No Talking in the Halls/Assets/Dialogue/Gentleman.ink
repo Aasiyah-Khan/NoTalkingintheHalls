@@ -31,7 +31,7 @@ Man, those were good times!
 
 *[Tell him to quiet down]
 
-# you
+# youshush
 SHUT UP!
 
 # Gentleman
@@ -47,7 +47,7 @@ He starts creepily stare at you.
 
 *[Spray water on him.]
 
-# you
+# youspray
 Begone ghost!
 
 # Gentleman

@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GhostLose.unity
     guid: 4f8bba1cd7362f044be8fa2040ffbf4a
+  - enabled: 1
+    path: Assets/Scenes/Fail.unity
+    guid: 8fda38aa49ca17644a1417bf2d843a55
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

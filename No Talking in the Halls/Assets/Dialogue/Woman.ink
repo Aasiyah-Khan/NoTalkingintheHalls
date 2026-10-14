@@ -22,8 +22,7 @@ Hi, sorry but you're being too loud. Could you please talk quieter please?
 Yes I'm in the romance section, I'm not stupid.
 
 *[Tell her to be quiet again]
-
-# you
+# youshush
 SHUT UP!
 
 # Lady
@@ -38,6 +37,9 @@ Sorry I will talk quieter.
 She starts whispering on the phone angrily.
 
 *[Spray water on her.]
+
+# youspray
+Take this!
 
 # Lady
 Ahhh, why the hell would you do that!

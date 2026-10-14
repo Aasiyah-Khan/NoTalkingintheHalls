@@ -31,7 +31,7 @@ Bob, Bob, wherefore art thou Bob?!
 
 *[Tell him to stop.]
 
-# you
+# youshush
 SHUT UP!
 
 # Thespian
@@ -45,7 +45,7 @@ He stares angrily at you.
 
 *[Spray water on him.]
 
-# you
+# youspray
 Begone ghost!
 
 # Thespian

@@ -21,7 +21,7 @@ Ghost Guy.
 # Nerd
 Ewwwww you like that guy?
 
-That guy sucks and so unoriginal.
+That guy sucks and is so unoriginal.
 
 *[Just agree with him.]
 
@@ -42,7 +42,7 @@ He continues to talk about comic book superheroes with everyone more quietly.
 
 *[Spray water on him.]
 
-# you
+# youspray
 SHUT UP!
 
 # Nerd

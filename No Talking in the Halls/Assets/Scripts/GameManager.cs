@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int ghostChances;
     public int humanChances;
     public int correct;
+    public int complete;
 
     public string characterName;
 
@@ -71,6 +72,7 @@ public class GameManager : MonoBehaviour
         ghostChances = 3;
         humanChances = 3;
         correct = 0;
+        complete = 0;
 
         characterName = "";
 

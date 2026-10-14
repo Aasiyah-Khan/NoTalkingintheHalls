@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.ShaderGraph;
+//using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -313,6 +313,7 @@ public class Dialogue2 : MonoBehaviour
                             // subtact from points
                             Debug.Log("Wrong Choice, Loser");
                             GameManager.instance.humanChances--;
+                            GameManager.instance.complete++;
                             GameManager.instance.LadyNeutral.SetActive(false);
                             GameManager.instance.LadyUpset.SetActive(true);
                             if (GameManager.instance.humanChances <= 2)
@@ -328,13 +329,18 @@ public class Dialogue2 : MonoBehaviour
                                 GameManager.instance.HR3.SetActive(true);
                                 SceneManager.LoadScene("Lose");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "wrongchild":
                             // subtact from points
                             Debug.Log("Wrong Choice, Loser");
                             GameManager.instance.humanChances--;
-                            GameManager.instance.ChildNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.ChildNeutral.SetActive(false);
                             GameManager.instance.ChildUpset.SetActive(true);
                             if (GameManager.instance.humanChances <= 2)
                             {
@@ -349,13 +355,18 @@ public class Dialogue2 : MonoBehaviour
                                 GameManager.instance.HR3.SetActive(true);
                                 SceneManager.LoadScene("Lose");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "wrongnerd":
                             // subtact from points
                             Debug.Log("Wrong Choice, Loser");
                             GameManager.instance.humanChances--;
-                            GameManager.instance.ChildNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.ChildNeutral.SetActive(false);
                             GameManager.instance.ChildUpset.SetActive(true);
                             if (GameManager.instance.humanChances <= 2)
                             {
@@ -370,11 +381,16 @@ public class Dialogue2 : MonoBehaviour
                                 GameManager.instance.HR3.SetActive(true);
                                 SceneManager.LoadScene("Lose");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "wrongghost1":
                             GameManager.instance.ghostChances--;
-                            GameManager.instance.GentlemanNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.GentlemanNeutral.SetActive(false);
                             GameManager.instance.GentlemanAngry.SetActive(true);
                             if (GameManager.instance.ghostChances <= 2)
                             {
@@ -389,11 +405,16 @@ public class Dialogue2 : MonoBehaviour
                                 GameManager.instance.Ghost3.SetActive(true);
                                 SceneManager.LoadScene("GhostLose");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "wrongghost2":
                             GameManager.instance.ghostChances--;
-                            GameManager.instance.BuffGuyNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.BuffGuyNeutral.SetActive(false);
                             GameManager.instance.BuffGuyAngry.SetActive(true);
                             if (GameManager.instance.ghostChances <= 2)
                             {
@@ -408,11 +429,16 @@ public class Dialogue2 : MonoBehaviour
                                 GameManager.instance.Ghost3.SetActive(true);
                                 SceneManager.LoadScene("GhostLose");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "wrongghost3":
                             GameManager.instance.ghostChances--;
-                            GameManager.instance.ThespianNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.ThespianNeutral.SetActive(false);
                             GameManager.instance.ThespianAngry.SetActive(true);
                             if (GameManager.instance.ghostChances <= 2)
                             {
@@ -427,76 +453,113 @@ public class Dialogue2 : MonoBehaviour
                                 GameManager.instance.Ghost3.SetActive(true);
                                 SceneManager.LoadScene("GhostLose");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "rightlady":
                             Debug.Log("You're right!");
                             GameManager.instance.correct++;
-                            GameManager.instance.LadyNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.LadyNeutral.SetActive(false);
                             GameManager.instance.LadyHappy.SetActive(true);
-                            crowd.volume -= 0.25f;
-                            if (GameManager.instance.correct == 3)
+                            crowd.volume -= 0.17f;
+                            if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "rightchild":
                             Debug.Log("You're right!");
                             GameManager.instance.correct++;
-                            GameManager.instance.ChildNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.ChildNeutral.SetActive(false);
                             GameManager.instance.ChildHappy.SetActive(true);
-                            crowd.volume -= 0.25f;
-                            if (GameManager.instance.correct == 3)
+                            crowd.volume -= 0.17f;
+                            if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "rightnerd":
                             Debug.Log("You're right!");
                             GameManager.instance.correct++;
-                            GameManager.instance.NerdNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.NerdNeutral.SetActive(false);
                             GameManager.instance.NerdHappy.SetActive(true);
-                            crowd.volume -= 0.25f;
+                            crowd.volume -= 0.17f;
                             if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "rightgentleman":
                             Debug.Log("You're right!");
                             GameManager.instance.correct++;
-                            GameManager.instance.GentlemanNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.GentlemanNeutral.SetActive(false);
                             GameManager.instance.Sound1.SetActive(false);
+                            crowd.volume -= 0.17f;
                             if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "rightbuff":
                             Debug.Log("You're right!");
                             GameManager.instance.correct++;
-                            GameManager.instance.GentlemanNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.BuffGuyNeutral.SetActive(false);
                             GameManager.instance.Sound2.SetActive(false);
+                            crowd.volume -= 0.17f;
                             if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "rightthespian":
                             Debug.Log("You're right!");
                             GameManager.instance.correct++;
-                            GameManager.instance.ThespianNeutral.SetActive(false);
+                    GameManager.instance.complete++;
+                    GameManager.instance.ThespianNeutral.SetActive(false);
                             GameManager.instance.Sound3.SetActive(false);
+                            crowd.volume -= 0.15f;
                             if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
                             }
-                        break;
+                    if (GameManager.instance.complete == 6 && GameManager.instance.correct != 6)
+                    {
+                        SceneManager.LoadScene("Fail");
+                    }
+                    break;
 
                         case "you":
                             //nametag = "You";
@@ -578,7 +641,7 @@ public class Dialogue2 : MonoBehaviour
                             speaker.GetComponent<Image>().sprite = gentNorm;
                              speaker.SetActive(true);
                             break;
-                        case "buff":
+                        case "buff guy":
                             nameUIYou.SetActive(false);
                             nametag = "Buff Guy";
                             charName.GetComponent<TextMeshProUGUI>().color = new Color(0.08235294f, 0.3372549f, 0.9568628f);

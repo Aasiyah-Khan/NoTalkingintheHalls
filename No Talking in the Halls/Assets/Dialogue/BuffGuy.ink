@@ -29,7 +29,7 @@ Take off your shirt let’s see your guns brah!
 
 *[Tell him to shut up.]
 
-# you
+# youshush
 SHUT UP!
 
 # Buff Guy
@@ -43,7 +43,7 @@ He angrily Shrieks at you.
 
 *[Spray water on him.]
 
-# you
+# youspray
 Begone ghost!
 
 # Buff Guy

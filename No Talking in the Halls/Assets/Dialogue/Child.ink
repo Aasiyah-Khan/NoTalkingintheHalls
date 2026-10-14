@@ -1,6 +1,6 @@
 You see a child making a ruckus and licking his lollipop.
 
-There are books all over the floor. Seems like they were knocked of the bookshelves.
+There are books all over the floor. Seems like they were knocked off the bookshelves.
 
 # you
 Hi there little one.
@@ -28,7 +28,7 @@ This guy is harassing me!
 
 *[Tell him to stop it!]
 
-# you
+# youshush
 SHUT UP!
 
 # Child
@@ -44,6 +44,9 @@ Pleasure doing business with you.
 He happily licks both lollipops.
 
 *[Spray water on him.]
+
+# youspray
+Stop it!
 
 # Child
 WAAAAAAAAAAAAAAAAAAAAAAAA!
