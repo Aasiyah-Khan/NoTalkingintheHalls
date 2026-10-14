@@ -4568,6 +4568,14 @@ MonoBehaviour:
   speaker: {fileID: 294537831}
   speakerYou: {fileID: 1166732819}
   nerdNorm: {fileID: 21300000, guid: be96e132e7b8bfc4f9a1e300af5f20c5, type: 3}
+  ladyNorm: {fileID: 21300000, guid: c823a75b4c85ff6459764fe103cbdd9f, type: 3}
+  thesNorm: {fileID: 21300000, guid: 6c81238af79958d4fb22ead3710e9102, type: 3}
+  buffNorm: {fileID: 21300000, guid: 032ebe56bb9043849aff6ca88aa35413, type: 3}
+  childNorm: {fileID: 21300000, guid: a5354e7253e106149b1d8644d10fd8f7, type: 3}
+  gentNorm: {fileID: 21300000, guid: a5b6322f77277e449803cfd58b98927d, type: 3}
+  youNorm: {fileID: 21300000, guid: 0824011432e3957459068c2dee8be0dc, type: 3}
+  youSpray: {fileID: 21300000, guid: 86cfc9e240ea6a24280241742875a60c, type: 3}
+  youShush: {fileID: 21300000, guid: 54f72c0af3a1c58469f08e1995d1d872, type: 3}
 --- !u!95 &395689871
 Animator:
   serializedVersion: 7

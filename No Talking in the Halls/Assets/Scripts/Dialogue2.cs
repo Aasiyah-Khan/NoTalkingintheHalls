@@ -85,6 +85,19 @@ public class Dialogue2 : MonoBehaviour
 
     // all character images below
     [SerializeField] private Sprite nerdNorm;
+    [SerializeField] private Sprite ladyNorm;
+    [SerializeField] private Sprite thesNorm;
+    [SerializeField] private Sprite buffNorm;
+    [SerializeField] private Sprite childNorm;
+    [SerializeField] private Sprite gentNorm;
+
+
+      [SerializeField] private Sprite youNorm;
+
+     [SerializeField] private Sprite youSpray;
+    [SerializeField] private Sprite youShush;
+
+
 
 
     // setup
@@ -493,6 +506,30 @@ public class Dialogue2 : MonoBehaviour
                             // hide the character you're speaking with 
                             speaker.SetActive(false);
                             // show you
+                            speakerYou.GetComponent<Image>().sprite = youNorm;
+                            speakerYou.SetActive(true);
+                            
+                        break;
+                         case "youspray":
+                            //nametag = "You";
+                            //charName.GetComponent<TextMeshProUGUI>().color = new Color(0.3215686f, 0.04705883f, 0.4862745f);
+                            nameUIYou.SetActive(true);
+                            nameUI.SetActive(false);
+                            // hide the character you're speaking with 
+                            speaker.SetActive(false);
+                            // show you
+                              speakerYou.GetComponent<Image>().sprite = youSpray;
+                            speakerYou.SetActive(true);
+                        break;
+                           case "youshush":
+                            //nametag = "You";
+                            //charName.GetComponent<TextMeshProUGUI>().color = new Color(0.3215686f, 0.04705883f, 0.4862745f);
+                            nameUIYou.SetActive(true);
+                            nameUI.SetActive(false);
+                            // hide the character you're speaking with 
+                            speaker.SetActive(false);
+                            // show you
+                              speakerYou.GetComponent<Image>().sprite = youShush;
                             speakerYou.SetActive(true);
                         break;
                         case "lady":
@@ -504,7 +541,7 @@ public class Dialogue2 : MonoBehaviour
                             speakerYou.SetActive(false);
                             // gotta set the sprite for the lady first then set the speaker UI active
                             // change sprite here
-
+                              speaker.GetComponent<Image>().sprite = ladyNorm;
                              speaker.SetActive(true);
 
                         break;
@@ -515,6 +552,7 @@ public class Dialogue2 : MonoBehaviour
                             nameUI.SetActive(true);
                             speakerYou.SetActive(false);
                             // change sprite here
+                              speaker.GetComponent<Image>().sprite = childNorm;
 
                              speaker.SetActive(true);
                         break;
@@ -537,7 +575,7 @@ public class Dialogue2 : MonoBehaviour
                             speakerYou.SetActive(false);
 
                             // change sprite here
-
+                            speaker.GetComponent<Image>().sprite = gentNorm;
                              speaker.SetActive(true);
                             break;
                         case "buff":
@@ -547,6 +585,7 @@ public class Dialogue2 : MonoBehaviour
                             nameUI.SetActive(true);
                             speakerYou.SetActive(false);
                             // change sprite here
+                              speaker.GetComponent<Image>().sprite = buffNorm;
 
                              speaker.SetActive(true);
                             break;
@@ -557,6 +596,7 @@ public class Dialogue2 : MonoBehaviour
                             nameUI.SetActive(true);
                             speakerYou.SetActive(false);
                             // change sprite here
+                              speaker.GetComponent<Image>().sprite = thesNorm;
 
                              speaker.SetActive(true);
                             break;
@@ -654,6 +694,32 @@ public class Dialogue2 : MonoBehaviour
                 EnterDialogueMode(inkFile3);
 
             }
+             else if (character == "Nerd")
+            {
+                charNum = 3;
+                EnterDialogueMode(inkFile3);
+
+            }
+              else if (character == "Gentleman")
+            {
+                charNum = 4;
+                EnterDialogueMode(inkFile4);
+
+            }
+              else if (character == "Buff Guy")
+            {
+                charNum = 5;
+                EnterDialogueMode(inkFile5);
+
+            }
+              else if (character == "Thespian")
+            {
+                charNum = 6;
+                EnterDialogueMode(inkFile6);
+
+            }
+            
+          
         }
         else
         {
