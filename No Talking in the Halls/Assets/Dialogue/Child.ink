@@ -26,7 +26,7 @@ WAAAAA WAAAAA!
 
 This guy is harrasing me!
 
-*Tell him to stop it!
+*[Tell him to stop it!]
 
 # you
 SHUT UP!
@@ -43,7 +43,7 @@ Pleasure doing business with you.
 # rightchild
 He happily licks both lolipops.
 
-*Spray water on him.
+*[Spray water on him.]
 
 # Child
 WAAAAAAAAAAAAAAAAAAAAAAAA!

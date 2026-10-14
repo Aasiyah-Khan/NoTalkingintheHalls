@@ -16,6 +16,9 @@ public class Dialogue2 : MonoBehaviour
     Story NPC1;
     Story NPC2;
     Story NPC3;
+    Story NPC4;
+    Story NPC5;
+    Story NPC6;
 
     // so the script knows what ink file is being read
      Story currentStory;
@@ -24,6 +27,9 @@ public class Dialogue2 : MonoBehaviour
     public Ink.UnityIntegration.InkFile inkFile;
     public Ink.UnityIntegration.InkFile inkFile2;
     public Ink.UnityIntegration.InkFile inkFile3;
+    public Ink.UnityIntegration.InkFile inkFile4;
+    public Ink.UnityIntegration.InkFile inkFile5;
+    public Ink.UnityIntegration.InkFile inkFile6;
 
 
     // to hold text in textbox
@@ -70,7 +76,7 @@ public class Dialogue2 : MonoBehaviour
 
     private GameObject currentNPC;
 
-
+    public AudioSource crowd;
 
     // setup
  void Start()
@@ -83,6 +89,9 @@ public class Dialogue2 : MonoBehaviour
     NPC1 = new Story(inkFile.storyJson);
     NPC2 = new Story(inkFile2.storyJson);
     NPC3 = new Story(inkFile3.storyJson);
+    NPC4 = new Story(inkFile4.storyJson);
+    NPC5 = new Story(inkFile5.storyJson);
+    NPC6 = new Story(inkFile6.storyJson);
 
     // stuff that need to be hiiden (UI)
     dialogueisPlaying = false;
@@ -95,6 +104,8 @@ public class Dialogue2 : MonoBehaviour
         // set the bools
         ismakingChoice = false;
         interacting = false;
+
+        //crowd = GetComponent<AudioSource>();
 
 }
 
@@ -135,6 +146,24 @@ public class Dialogue2 : MonoBehaviour
             currentStory = NPC3;
             // to display the first tag in the story 
         
+        }
+        else if (charNum == 4)
+        {
+            currentStory = NPC4;
+            // to display the first tag in the story 
+
+        }
+        else if (charNum == 5)
+        {
+            currentStory = NPC5;
+            // to display the first tag in the story 
+
+        }
+        else if (charNum == 6)
+        {
+            currentStory = NPC6;
+            // to display the first tag in the story 
+
         }
         else
         {
@@ -192,6 +221,18 @@ public class Dialogue2 : MonoBehaviour
         else if (charNum == 3)
         {
             currentStory = NPC3;
+        }
+        else if( charNum == 4)
+        {
+            currentStory = NPC4;
+        }
+        else if (charNum == 5)
+        {
+            currentStory = NPC5;
+        }
+        else if (charNum == 6)
+        {
+            currentStory = NPC6;
         }
 
         // if youre in choice mode just end this whole thing
@@ -305,7 +346,8 @@ public class Dialogue2 : MonoBehaviour
 
                         case "wrongghost1":
                             GameManager.instance.ghostChances--;
-                            GameManager.instance.Sound1.SetActive(false);
+                            GameManager.instance.GentlemanNeutral.SetActive(false);
+                            GameManager.instance.GentlemanAngry.SetActive(true);
                             if (GameManager.instance.ghostChances <= 2)
                             {
                                 GameManager.instance.Ghost1.SetActive(true);
@@ -317,13 +359,14 @@ public class Dialogue2 : MonoBehaviour
                             if (GameManager.instance.ghostChances <= 0)
                             {
                                 GameManager.instance.Ghost3.SetActive(true);
-                                SceneManager.LoadScene("Lose");
+                                SceneManager.LoadScene("GhostLose");
                             }
                         break;
 
                         case "wrongghost2":
                             GameManager.instance.ghostChances--;
-                            GameManager.instance.Sound2.SetActive(false);
+                            GameManager.instance.BuffGuyNeutral.SetActive(false);
+                            GameManager.instance.BuffGuyAngry.SetActive(true);
                             if (GameManager.instance.ghostChances <= 2)
                             {
                                 GameManager.instance.Ghost1.SetActive(true);
@@ -335,13 +378,14 @@ public class Dialogue2 : MonoBehaviour
                             if (GameManager.instance.ghostChances <= 0)
                             {
                                 GameManager.instance.Ghost3.SetActive(true);
-                                SceneManager.LoadScene("Lose");
+                                SceneManager.LoadScene("GhostLose");
                             }
                         break;
 
                         case "wrongghost3":
                             GameManager.instance.ghostChances--;
-                            GameManager.instance.Sound3.SetActive(false);
+                            GameManager.instance.ThespianNeutral.SetActive(false);
+                            GameManager.instance.ThespianAngry.SetActive(true);
                             if (GameManager.instance.ghostChances <= 2)
                             {
                                 GameManager.instance.Ghost1.SetActive(true);
@@ -353,7 +397,7 @@ public class Dialogue2 : MonoBehaviour
                             if (GameManager.instance.ghostChances <= 0)
                             {
                                 GameManager.instance.Ghost3.SetActive(true);
-                                SceneManager.LoadScene("Lose");
+                                SceneManager.LoadScene("GhostLose");
                             }
                         break;
 
@@ -362,6 +406,7 @@ public class Dialogue2 : MonoBehaviour
                             GameManager.instance.correct++;
                             GameManager.instance.LadyNeutral.SetActive(false);
                             GameManager.instance.LadyHappy.SetActive(true);
+                            crowd.volume -= 0.25f;
                             if (GameManager.instance.correct == 3)
                             {
                                 SceneManager.LoadScene("Win");
@@ -373,6 +418,7 @@ public class Dialogue2 : MonoBehaviour
                             GameManager.instance.correct++;
                             GameManager.instance.ChildNeutral.SetActive(false);
                             GameManager.instance.ChildHappy.SetActive(true);
+                            crowd.volume -= 0.25f;
                             if (GameManager.instance.correct == 3)
                             {
                                 SceneManager.LoadScene("Win");
@@ -384,7 +430,41 @@ public class Dialogue2 : MonoBehaviour
                             GameManager.instance.correct++;
                             GameManager.instance.NerdNeutral.SetActive(false);
                             GameManager.instance.NerdHappy.SetActive(true);
-                            if (GameManager.instance.correct == 3)
+                            crowd.volume -= 0.25f;
+                            if (GameManager.instance.correct == 6)
+                            {
+                                SceneManager.LoadScene("Win");
+                            }
+                        break;
+
+                        case "rightgentleman":
+                            Debug.Log("You're right!");
+                            GameManager.instance.correct++;
+                            GameManager.instance.GentlemanNeutral.SetActive(false);
+                            GameManager.instance.Sound1.SetActive(false);
+                            if (GameManager.instance.correct == 6)
+                            {
+                                SceneManager.LoadScene("Win");
+                            }
+                        break;
+
+                        case "rightbuff":
+                            Debug.Log("You're right!");
+                            GameManager.instance.correct++;
+                            GameManager.instance.GentlemanNeutral.SetActive(false);
+                            GameManager.instance.Sound2.SetActive(false);
+                            if (GameManager.instance.correct == 6)
+                            {
+                                SceneManager.LoadScene("Win");
+                            }
+                        break;
+
+                        case "rightthespian":
+                            Debug.Log("You're right!");
+                            GameManager.instance.correct++;
+                            GameManager.instance.ThespianNeutral.SetActive(false);
+                            GameManager.instance.Sound3.SetActive(false);
+                            if (GameManager.instance.correct == 6)
                             {
                                 SceneManager.LoadScene("Win");
                             }
@@ -410,7 +490,22 @@ public class Dialogue2 : MonoBehaviour
                             charName.GetComponent<TextMeshProUGUI>().color = new Color(0.8509805f, 0.7294118f, 0.09803922f);
                             nameUI.SetActive(true);
                         break;
-                }
+                        case "gentleman":
+                            nametag = "Gentleman";
+                            charName.GetComponent<TextMeshProUGUI>().color = new Color(0.882353f, 0.03921569f, 0f);
+                            nameUI.SetActive(true);
+                            break;
+                        case "buff":
+                            nametag = "Buff Guy";
+                            charName.GetComponent<TextMeshProUGUI>().color = new Color(0.08235294f, 0.3372549f, 0.9568628f);
+                            nameUI.SetActive(true);
+                            break;
+                        case "thespian":
+                            nametag = "Thespian";
+                            charName.GetComponent<TextMeshProUGUI>().color = new Color(0.4156863f, 0.3490196f, 0.007843138f);
+                            nameUI.SetActive(true);
+                            break;
+            }
 
 
             }

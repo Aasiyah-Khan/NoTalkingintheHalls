@@ -23,7 +23,7 @@ Ewwwww you like that guy?
 
 That guy sucks and so unoriginal.
 
-*Just agree with him.
+*[Just agree with him.]
 
 # you
 Sorry you're right, Pogo-Stick Man is the best superhero out there.
@@ -40,7 +40,7 @@ Sure, no problem.
 # rightnerd
 He continues to talk about comic book superheroes with everyone more quietly.
 
-*Spary water on him.
+*[Spary water on him.]
 
 # you
 SHUT UP!

@@ -42,6 +42,15 @@ public class GameManager : MonoBehaviour
     public GameObject NerdHappy;
     public GameObject NerdUpset;
 
+    public GameObject GentlemanNeutral;
+    public GameObject GentlemanAngry;
+
+    public GameObject BuffGuyNeutral;
+    public GameObject BuffGuyAngry;
+
+    public GameObject ThespianNeutral;
+    public GameObject ThespianAngry;
+
     void Awake()
     {
         if (instance == null)

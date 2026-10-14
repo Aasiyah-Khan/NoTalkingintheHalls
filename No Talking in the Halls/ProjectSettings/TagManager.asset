@@ -9,6 +9,9 @@ TagManager:
   - Lady
   - Child
   - Nerd
+  - Gentleman
+  - Buff Guy
+  - Thespian
   layers:
   - Default
   - TransparentFX

@@ -13,10 +13,14 @@ public class CameraFollower : MonoBehaviour
 
     //float xPos = 0f;
     //float yPos = 0f;
-    float minX = -29.12f;
-    float maxX = 28.99f;
-    float minY = -1.76f;
-    float maxY = 61f;
+    float minX = -45f;
+    //29.12f;
+    float maxX = 45f;
+    //28.99f;
+    float minY = -8.5f;
+    //1.76f;
+    float maxY = 93f;
+    //61f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
