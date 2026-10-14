@@ -79,12 +79,12 @@ public class movement : MonoBehaviour
         //    rb.linearVelocityX = 0;
         //}
 
-        if (MoveInput.x != 0)
+        if (MoveInput.x != 0 || MoveInput.y != 0)
         {
             anim.SetBool("isRunning", true);
         }
         
-        if (MoveInput.x == 0)
+        if (MoveInput.x == 0 && MoveInput.y == 0)
         {
             Debug.Log("Anim stop");
             anim.SetBool("isRunning", false);

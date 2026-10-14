@@ -33,21 +33,23 @@ public class Dialogue2 : MonoBehaviour
 
 
     // to hold text in textbox
-    public GameObject dialogueText;
+    [SerializeField] private GameObject dialogueText;
 
     // the text itself
     string dialoguetxt;
 
     // entire ui panel
-    public GameObject dialoguePanel;
+     [SerializeField] private GameObject dialoguePanel;
 
 
     // for the name of the character
     string nametag;
-
+    
     // ui for the name
-    public GameObject nameUI;
-    public GameObject charName;
+    [SerializeField] private GameObject nameUI;
+    [SerializeField] private GameObject nameUIYou;
+    [SerializeField] private GameObject charName;
+    [SerializeField] private GameObject yourName;
 
     // to keep track of stuff
     bool dialogueisPlaying;
@@ -61,22 +63,29 @@ public class Dialogue2 : MonoBehaviour
 // to know if player has choice options on screen
     private bool ismakingChoice;
 
-// where the image sprite for the the character speaking goes
-    public GameObject speaker;
+
     // the choice buttons
 
     // for my choices 
-     public GameObject optionPanel;
-    public GameObject buttons;
+    [SerializeField] private GameObject optionPanel;
+   [SerializeField] private GameObject buttons;
      // this is what the player chooses to select
     static Choice choiceSelected;
 
-    private bool isWaitingForChoice;
+   
     //public Choice element;
 
     private GameObject currentNPC;
 
     public AudioSource crowd;
+
+// where the image sprite for the the character speaking goes
+     [SerializeField] private  GameObject speaker;
+      [SerializeField] private  GameObject speakerYou;
+
+    // all character images below
+    [SerializeField] private Sprite nerdNorm;
+
 
     // setup
  void Start()
@@ -98,6 +107,9 @@ public class Dialogue2 : MonoBehaviour
      dialoguePanel.SetActive(false);
         charNum = 0;
         nameUI.SetActive(false);
+        nameUIYou.SetActive(false);
+        speaker.SetActive(false);
+        speakerYou.SetActive(false);
        
         optionPanel.SetActive(false);
 
@@ -192,6 +204,9 @@ public class Dialogue2 : MonoBehaviour
         talking = false;
         interacting = false;
         nameUI.SetActive(false);
+        speaker.SetActive(false);
+        speakerYou.SetActive(false);
+        nameUIYou.SetActive(false);
         //charUi.SetActive(false); -> unneeded rn
         if(currentNPC.GetComponent<BoxCollider2D>().isTrigger == true)
         {
@@ -471,39 +486,87 @@ public class Dialogue2 : MonoBehaviour
                         break;
 
                         case "you":
-                            nametag = "You";
-                            charName.GetComponent<TextMeshProUGUI>().color = new Color(0.3215686f, 0.04705883f, 0.4862745f);
-                            nameUI.SetActive(true);
+                            //nametag = "You";
+                            //charName.GetComponent<TextMeshProUGUI>().color = new Color(0.3215686f, 0.04705883f, 0.4862745f);
+                            nameUIYou.SetActive(true);
+                            nameUI.SetActive(false);
+                            // hide the character you're speaking with 
+                            speaker.SetActive(false);
+                            // show you
+                            speakerYou.SetActive(true);
                         break;
                         case "lady":
+                            nameUIYou.SetActive(false);
                             nametag = "Lady";
                             charName.GetComponent<TextMeshProUGUI>().color = new Color(0.1843137f, 0.5607843f, 0.3568628f);
                             nameUI.SetActive(true);
+                            // hide you
+                            speakerYou.SetActive(false);
+                            // gotta set the sprite for the lady first then set the speaker UI active
+                            // change sprite here
+
+                             speaker.SetActive(true);
+
                         break;
                         case "child":
+                            nameUIYou.SetActive(false);
                             nametag = "Child";
                             charName.GetComponent<TextMeshProUGUI>().color = new Color(0, 0.5764706f, 0.7333333f);
                             nameUI.SetActive(true);
+                            speakerYou.SetActive(false);
+                            // change sprite here
+
+                             speaker.SetActive(true);
                         break;
                         case "nerd":
+                            nameUIYou.SetActive(false);
                             nametag = "Nerd";
                             charName.GetComponent<TextMeshProUGUI>().color = new Color(0.8509805f, 0.7294118f, 0.09803922f);
                             nameUI.SetActive(true);
+                            speakerYou.SetActive(false);
+                            // this is where showing the sprite would happen
+                            speaker.GetComponent<Image>().sprite = nerdNorm;
+                            speaker.SetActive(true);
+
                         break;
                         case "gentleman":
+                            nameUIYou.SetActive(false);
                             nametag = "Gentleman";
                             charName.GetComponent<TextMeshProUGUI>().color = new Color(0.882353f, 0.03921569f, 0f);
                             nameUI.SetActive(true);
+                            speakerYou.SetActive(false);
+
+                            // change sprite here
+
+                             speaker.SetActive(true);
                             break;
                         case "buff":
+                            nameUIYou.SetActive(false);
                             nametag = "Buff Guy";
                             charName.GetComponent<TextMeshProUGUI>().color = new Color(0.08235294f, 0.3372549f, 0.9568628f);
                             nameUI.SetActive(true);
+                            speakerYou.SetActive(false);
+                            // change sprite here
+
+                             speaker.SetActive(true);
                             break;
                         case "thespian":
+                            nameUIYou.SetActive(false);
                             nametag = "Thespian";
                             charName.GetComponent<TextMeshProUGUI>().color = new Color(0.4156863f, 0.3490196f, 0.007843138f);
                             nameUI.SetActive(true);
+                            speakerYou.SetActive(false);
+                            // change sprite here
+
+                             speaker.SetActive(true);
+                            break;
+                        // don't add anything below default
+                        default:
+                        // no Ui shows
+                            nameUIYou.SetActive(false);
+                            nameUI.SetActive(false);
+                            speaker.SetActive(false);
+                            speakerYou.SetActive(false);
                             break;
             }
 
@@ -604,8 +667,7 @@ public class Dialogue2 : MonoBehaviour
     {
         // now i shouldnt be able to continue with the story until a choice is made
         ismakingChoice = true;
-        // i think i can remove this var
-        isWaitingForChoice = true;
+    
         optionPanel.SetActive(true);
 
         // Clear any old choices sitting in the panel first
@@ -638,8 +700,7 @@ public class Dialogue2 : MonoBehaviour
         
        // hide my UI
         optionPanel.SetActive(false);
-        // once again i think this var is the same as the one below...
-        isWaitingForChoice = false;
+       
          ismakingChoice = false;
         // make it so that you can press continue again
         //ismakingChoice = false;
